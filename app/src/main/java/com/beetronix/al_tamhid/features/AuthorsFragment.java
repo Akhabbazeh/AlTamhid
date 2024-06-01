@@ -9,11 +9,13 @@ import android.widget.ImageView;
 
 import com.beetronix.al_tamhid.R;
 import com.example.myapplication.features.ui.BaseFragment;
+import com.example.myapplication.util.Tool;
 
 
 public class AuthorsFragment extends BaseFragment {
 
     private ImageView ButtonBack;
+    private ImageView img_logo_app_authors;
     public AuthorsFragment() {
 
     }
@@ -22,8 +24,11 @@ public class AuthorsFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view_4 = LayoutInflater.from(getContext()).inflate(R.layout.fragment_authors, container, false);
         setNotificationBarColor(R.color.primary_color);
+        img_logo_app_authors = view_4.findViewById(R.id.img_logo_app_authors);
 
         ButtonBack = view_4.findViewById(R.id.ButtonBack);
+
+        Tool.displayImageDrawable(getContext(),img_logo_app_authors,R.drawable.bsem_allah_img);
         ButtonBack.setOnClickListener(new View.OnClickListener()
         {
             @Override
