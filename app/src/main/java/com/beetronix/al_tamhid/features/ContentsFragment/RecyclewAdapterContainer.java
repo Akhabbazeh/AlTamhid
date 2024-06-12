@@ -84,55 +84,55 @@ class RecyclewAdapterContainer extends RecyclerView.Adapter<RecyclewAdapterConta
                 break;
                     case 6 :
                     {
-                        sendPageNumber(16);
+                        sendPageNumber(14);
 
                     }
                     break;
                     case 7 :
                     {
-                        sendPageNumber(18);
+                        sendPageNumber(16);
 
                     }
                     break;
                     case 8 :
                 {
-                    sendPageNumber(22);
+                    sendPageNumber(20);
 
                 }
                 break;
                     case 9 :
                     {
-                        sendPageNumber(28);
+                        sendPageNumber(26);
 
                     }
                     break;
                     case 10 :
                     {
-                        sendPageNumber(31);
+                        sendPageNumber(29);
 
                     }
                     break;
                     case 11 :
                     {
-                        sendPageNumber(34);
+                        sendPageNumber(32);
 
                     }
                     break;
                     case 12 :
                     {
-                        sendPageNumber(37);
+                        sendPageNumber(30);
 
                     }
                     break;
                     case 13 :
                     {
-                        sendPageNumber(38);
+                        sendPageNumber(29);
 
                     }
                     break;
                     case 14 :
                     {
-                        sendPageNumber(39);
+                        sendPageNumber(37);
 
                     }
                     break;

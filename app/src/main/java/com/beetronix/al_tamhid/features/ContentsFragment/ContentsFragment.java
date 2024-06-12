@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.beetronix.al_tamhid.R;
+import com.beetronix.al_tamhid.util.Tool;
 import com.example.myapplication.features.ui.BaseFragment;
 
 
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 
 public class ContentsFragment extends BaseFragment {
     private ImageView ButtonBack;
+    private ImageView img_background_content;
     public ContentsFragment() {
 
     }
@@ -28,10 +30,16 @@ public class ContentsFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view_6 = LayoutInflater.from(getContext()).inflate(R.layout.fragment_contents, container, false);
         setNotificationBarColor(R.color.primary_color);
+        ButtonBack = view_6.findViewById(R.id.ButtonBack);
+        img_background_content = view_6.findViewById(R.id.img_background_content);
+
+
+        Tool.displayImageDrawable(getContext(),img_background_content,R.drawable.background_page);
+        Tool.displayImageDrawable(getContext(),ButtonBack,R.drawable.ic_arrow_right);
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 
-        ButtonBack = view_6.findViewById(R.id.ButtonBack);
+
         ButtonBack.setOnClickListener(new View.OnClickListener()
         {
             @Override

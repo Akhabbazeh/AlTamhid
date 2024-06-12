@@ -8,11 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.beetronix.al_tamhid.R;
+import com.beetronix.al_tamhid.util.Tool;
 import com.example.myapplication.features.ui.BaseFragment;
 
 
 public class UsersGuideFragment extends BaseFragment {
     private ImageView ButtonBack;
+    private ImageView background_page_user_guide;
     public UsersGuideFragment() {
 
     }
@@ -23,6 +25,9 @@ public class UsersGuideFragment extends BaseFragment {
         setNotificationBarColor(R.color.primary_color);
 
         ButtonBack = view_5.findViewById(R.id.ButtonBack);
+        background_page_user_guide = view_5.findViewById(R.id.background_page_user_guide);
+        Tool.displayImageDrawable(getContext(),background_page_user_guide,R.drawable.background_page);
+        Tool.displayImageDrawable(getContext(),ButtonBack,R.drawable.ic_arrow_right);
         ButtonBack.setOnClickListener(new View.OnClickListener()
         {
             @Override

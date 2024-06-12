@@ -9,11 +9,10 @@
     tools:context=".features.thisBook.ThisBookFragment">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/background_page_start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/background_page"
         tools:layout_editor_absoluteX="-49dp"
         tools:layout_editor_absoluteY="-70dp" />
 
@@ -31,7 +30,6 @@
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/spacing_m_large"
-            android:src="@drawable/ic_arrow_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

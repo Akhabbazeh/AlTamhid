@@ -20,7 +20,7 @@ import com.beetronix.al_tamhid.R;
 import com.beetronix.al_tamhid.features.PageInterface;
 import com.beetronix.al_tamhid.features.*;
 
-import com.example.myapplication.util.Tool;
+import com.beetronix.al_tamhid.util.Tool;
 import com.example.myapplication.features.ui.BaseFragment;
 
 
@@ -50,6 +50,8 @@ public class pagesFragment extends BaseFragment {
     private int position=0;
     private TextView txt_page_num;
     private boolean stateIsCounter = false;
+    private ImageView background_page_page;
+    private ImageView img_high_margin;
 
 
     public pagesFragment() {
@@ -91,7 +93,8 @@ public class pagesFragment extends BaseFragment {
         btn_add_counter = view_2.findViewById(R.id.btn_add_counter);
         btn_remove_counter = view_2.findViewById(R.id.btn_remove_counter);
         txt_page_num = view_2.findViewById(R.id.txt_page_num);
-
+        background_page_page = view_2.findViewById(R.id.background_page_page);
+        img_high_margin = view_2.findViewById(R.id.img_high_margin);
 
 
 
@@ -198,6 +201,13 @@ public class pagesFragment extends BaseFragment {
 
        Tool.displayImageDrawable(getContext(), stop_player_icon, R.drawable.stop_player_icon);
        Tool.displayImageDrawable(getContext(), run_player_icon, R.drawable.run_player_icon);
+       Tool.displayImageDrawable(getContext(), background_page_page, R.drawable.background_page);
+       Tool.displayImageDrawable(getContext(), img_high_margin, R.drawable.high_margin);
+       Tool.displayImageDrawable(getContext(), btn_cancel_counter, R.drawable.concel_icon);
+       Tool.displayImageDrawable(getContext(), btn_play_counter, R.drawable.run_player_icon);
+       Tool.displayImageDrawable(getContext(), btn_add_counter, R.drawable.add_icon);
+       Tool.displayImageDrawable(getContext(), btn_remove_counter, R.drawable.remove_icon);
+
 
        run_player_icon.setOnClickListener(new View.OnClickListener() {
            @Override

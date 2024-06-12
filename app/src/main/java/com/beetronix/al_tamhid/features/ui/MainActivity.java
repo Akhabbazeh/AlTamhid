@@ -11,7 +11,7 @@ import com.beetronix.al_tamhid.R;
 import com.beetronix.al_tamhid.features.PageInterface;
 import com.beetronix.al_tamhid.features.StartFragment;
 import com.beetronix.al_tamhid.features.pages.pagesFragment;
-import com.example.myapplication.util.Tool;
+import com.beetronix.al_tamhid.util.Tool;
 
 public class MainActivity extends AppCompatActivity implements PageInterface {
     private MediaPlayer music;
@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements PageInterface {
     }
 
     public void click(View view) {
+        view.setBackground(getResources().getDrawable(R.drawable.background_circle_selector));
+        Toast.makeText(getApplicationContext(), view.getTag().toString(), Toast.LENGTH_LONG).show();
+
         if (isPlayer == true) {
             Toast.makeText(getApplicationContext(), "الرجاء إيقاف التسجيل أولاً", Toast.LENGTH_LONG).show();
         } else {

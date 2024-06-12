@@ -20,15 +20,16 @@ import com.example.myapplication.features.ui.BaseFragment;
 
 
 public class StartFragment extends BaseFragment {
-    ImageView background_start_fragment;
-    ImageView img_home_shape_top;
-    ImageView title_group_book;
-    ImageView logo_app;
-    ImageView background_buttons_start_fragment_1;
-    ImageView background_buttons_start_fragment_2;
-    ImageView background_buttons_start_fragment_3;
-    ImageView background_buttons_start_fragment_4;
-    ImageView background_buttons_start_fragment_5;
+    private ImageView background_start_fragment;
+    private ImageView img_home_shape_top;
+    private ImageView title_group_book;
+    private ImageView logo_app;
+    private ImageView background_buttons_start_fragment_1;
+    private ImageView background_buttons_start_fragment_2;
+    private ImageView background_buttons_start_fragment_3;
+    private ImageView background_buttons_start_fragment_4;
+    private ImageView background_buttons_start_fragment_5;
+    private ImageView background_page_start;
 
 
 
@@ -49,6 +50,7 @@ public class StartFragment extends BaseFragment {
         img_home_shape_top = view.findViewById(R.id.img_home_shape_top);
         title_group_book = view.findViewById(R.id.title_group_book);
         logo_app = view.findViewById(R.id.logo_app);
+        background_page_start = view.findViewById(R.id.background_page_start);
         background_buttons_start_fragment_1 = view.findViewById(R.id.background_buttons_start_fragment_1);
         background_buttons_start_fragment_2 = view.findViewById(R.id.background_buttons_start_fragment_2);
         background_buttons_start_fragment_3 = view.findViewById(R.id.background_buttons_start_fragment_3);
@@ -59,6 +61,7 @@ public class StartFragment extends BaseFragment {
 
         displayImageDrawable(getContext(),title_group_book,R.drawable.title_group_book);
         displayImageDrawable(getContext(),background_start_fragment,R.drawable.background_start_fragment);
+        displayImageDrawable(getContext(),background_page_start,R.drawable.background_page);
         displayImageDrawable(getContext(),img_home_shape_top,R.drawable.img_home_shape_top);
         displayImageDrawable(getContext(),logo_app,R.drawable.logo_app);
         displayImageDrawable(getContext(),background_buttons_start_fragment_1,R.drawable.background_buttons_start_fragment_2);

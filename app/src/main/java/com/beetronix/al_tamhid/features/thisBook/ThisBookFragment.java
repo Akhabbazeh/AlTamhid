@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beetronix.al_tamhid.R;
+import com.beetronix.al_tamhid.util.Tool;
 import com.example.myapplication.features.ui.BaseFragment;
 
 
@@ -37,6 +38,9 @@ public class ThisBookFragment extends BaseFragment {
 
         this_book_words_text = view_3.findViewById(R.id.this_book_words_text);
         grid_View_img_book = view_3.findViewById(R.id.grid_View_img_book);
+        ButtonBack = view_3.findViewById(R.id.ButtonBack);
+
+        Tool.displayImageDrawable(getContext(),ButtonBack,R.drawable.ic_arrow_right);
 
         SpannableString spannableString=new SpannableString(this_book_words_text_colors);
         ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(getResources().getColor(R.color.primary_color));

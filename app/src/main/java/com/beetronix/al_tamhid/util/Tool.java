@@ -1,4 +1,4 @@
-package com.example.myapplication.util;
+package com.beetronix.al_tamhid.util;
 
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -46,9 +46,89 @@ public class Tool {
 
         if (position==0){
             return MediaPlayer.create(context,R.raw.page_11);
+        }else if (position==1){
+            return MediaPlayer.create(context,R.raw.page_12);
+        }else if (position==2){
+            return MediaPlayer.create(context,R.raw.page_13);
+        }else if (position==3){
+            return MediaPlayer.create(context,R.raw.page_14);
         }else if (position==4){
             return MediaPlayer.create(context,R.raw.page_15);
-        }else return MediaPlayer.create(context,R.raw.page_00);
+        }else if (position==5){
+            return MediaPlayer.create(context,R.raw.page_16);
+        }else if (position==6){
+            return MediaPlayer.create(context,R.raw.page_17);
+        }else if (position==7){
+            return MediaPlayer.create(context,R.raw.page_18);
+        }else if (position==8){
+            return MediaPlayer.create(context,R.raw.page_19);
+        }else if (position==9){
+            return MediaPlayer.create(context,R.raw.page_20);
+        }else if (position==10){
+            return MediaPlayer.create(context,R.raw.page_21);
+        }else if (position==11){
+            return MediaPlayer.create(context,R.raw.page_22);
+        }else if (position==12){
+            return MediaPlayer.create(context,R.raw.page_23);
+        }else if (position==13){
+            return MediaPlayer.create(context,R.raw.page_24);
+        }else if (position==14){
+            return MediaPlayer.create(context,R.raw.page_25);
+        }else if (position==15) {
+            return MediaPlayer.create(context, R.raw.page_26);
+        }else if (position==16){
+            return MediaPlayer.create(context,R.raw.page_28);
+        }else if (position==17){
+            return MediaPlayer.create(context,R.raw.page_29);
+        }else if (position==18){
+            return MediaPlayer.create(context,R.raw.page_30);
+        }else if (position==19){
+            return MediaPlayer.create(context,R.raw.page_31);
+        }else if (position==20){
+            return MediaPlayer.create(context,R.raw.page_32);
+        }else if (position==21){
+            return MediaPlayer.create(context,R.raw.page_33);
+        }else if (position==22){
+            return MediaPlayer.create(context,R.raw.page_34);
+        }else if (position==23){
+            return MediaPlayer.create(context,R.raw.page_35);
+        }else if (position==24){
+            return MediaPlayer.create(context,R.raw.page_36);
+        }else if (position==25){
+            return MediaPlayer.create(context,R.raw.page_37);
+        }else if (position==26){
+            return MediaPlayer.create(context,R.raw.page_38);
+        }else if (position==27){
+            return MediaPlayer.create(context,R.raw.page_40);
+        }else if (position==29){
+            return MediaPlayer.create(context,R.raw.page_41);
+        }else if (position==30){
+            return MediaPlayer.create(context,R.raw.page_42);
+        }else if (position==31){
+            return MediaPlayer.create(context,R.raw.page_43);
+        }else if (position==32){
+            return MediaPlayer.create(context,R.raw.page_44);
+        }else if (position==33){
+            return MediaPlayer.create(context,R.raw.page_45);
+        }else if (position==36){
+            return MediaPlayer.create(context,R.raw.page_46);
+        }else if (position==37){
+            return MediaPlayer.create(context,R.raw.page_47);
+        }else if (position==38){
+            return MediaPlayer.create(context,R.raw.page_48);
+        }else if (position==39){
+            return MediaPlayer.create(context,R.raw.page_49);
+        }else if (position==40){
+            return MediaPlayer.create(context,R.raw.page_50);
+        }else if (position==41){
+            return MediaPlayer.create(context,R.raw.page_51);
+        }else if (position==42){
+            return MediaPlayer.create(context,R.raw.page_52);
+        }else if (position==43){
+            return MediaPlayer.create(context,R.raw.page_53);
+        }else {
+            return MediaPlayer.create(context, R.raw.page_00);
+        }
     }
 
     public static String getPageTitle(int pageNum){
@@ -1062,9 +1142,9 @@ public class Tool {
             case "page_39_15":
                 return R.raw.page_39_15;
             case "page_39_16":
-                return R.raw.page_39_16;
-            case "page_39_17":
-                return R.raw.page_39_17;
+//                return R.raw.page_39_16;
+//            case "page_39_17":
+//                return R.raw.page_39_17;
             case "page_39_18":
                 return R.raw.page_39_18;
             case "page_39_19":
