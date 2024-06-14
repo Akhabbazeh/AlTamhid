@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements PageInterface {
     public void OnLongClickListeners(String buttonTile) {
         if (isPlayer != true && isPause==false) {
             // الشرط السابق ينص أنه من بعد ما تستقبل النقرة المطولة على أحد عبارات التمارين الخاصة بشاشة معينة إذا مافي مقطع صوتي شغال و وضعية الإيقاف المؤقت غير شغالة استجب للضغطة المطولة
-            pagesFragment.OnLongClickListeners(buttonTile);
+//            pagesFragment.OnLongClickListeners(buttonTile);
         }
     }
 
