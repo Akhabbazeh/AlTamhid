@@ -9,11 +9,13 @@
     tools:context=".features.OurServicesFragment">
 
     <ImageView
+        android:id="@+id/img_background_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_xxx_large"
         android:background="@color/primary_color"
@@ -48,5 +50,107 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+        <TextView
+            style="@style/style_text_authors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="تصميم الكتاب"
+            android:textColor="@color/primary_color" />
+
+        <TextView
+            style="@style/style_text_authors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_x_small"
+            android:text="يمان يحيى فتلون"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/style_text_Define_him"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0912345678"
+
+            />
+
+        <TextView
+            style="@style/style_text_authors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:text="هندسة الصوت"
+            android:textColor="@color/primary_color" />
+
+        <TextView
+            style="@style/style_text_authors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_x_small"
+            android:text="استيديو كوراني"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/style_text_Define_him"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0912345678"
+
+            />
+
+        <TextView
+            style="@style/style_text_authors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:text="قام ببرمجته"
+            android:textColor="@color/primary_color" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_authors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_x_small"
+                android:text="المهندس: عبداللطيف ضعيف"
+                android:textColor="@color/black" />
+
+            <TextView
+                style="@style/style_text_authors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_x_small"
+                android:text="المهندس: عبدالغني يوسف خبازة"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_text_Define_him"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0912345678"
+
+            />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

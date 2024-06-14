@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/content_child_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:layout_marginTop="@dimen/spacing_medium"
+    android:layout_marginHorizontal="@dimen/spacing_middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_circle_selector"
+        android:paddingVertical="@dimen/spacing_middle"
+        >
+       <View
+           android:layout_width="1dp"
+           android:layout_height="match_parent"
+           android:background="@color/primaryColor"/>
+        <TextView
+            android:id="@+id/txtRecyclerNameChild"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/style_text_Define_him"
+            android:layout_marginStart="@dimen/spacing_middle"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_page_num_content_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/style_text_Define_him"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/primary_color"
+            />
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

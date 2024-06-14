@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.beetronix.al_tamhid.R;
 import com.beetronix.al_tamhid.features.PageInterface;
 import com.beetronix.al_tamhid.features.StartFragment;
+import com.beetronix.al_tamhid.features.pages.Page_11;
 import com.beetronix.al_tamhid.features.pages.pagesFragment;
 import com.beetronix.al_tamhid.util.Tool;
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements PageInterface {
         Toast.makeText(getApplicationContext(), view.getTag().toString(), Toast.LENGTH_LONG).show();
 
         if (isPlayer == true) {
-            Toast.makeText(getApplicationContext(), "الرجاء إيقاف التسجيل أولاً", Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "الرجاء إيقاف التسجيل أولاً", Toast.LENGTH_LONG).show();
         } else {
 
             if (music != null) {
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements PageInterface {
             pagesFragment.OnLongClickListeners(buttonTile);
         }
     }
+
+
 
     }
 

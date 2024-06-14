@@ -12,7 +12,7 @@ import com.beetronix.al_tamhid.R;
 import com.beetronix.al_tamhid.features.PageInterface;
 import com.example.myapplication.features.ui.BaseFragment;
 
-public class Page_11 extends BaseFragment {
+public class Page_11 extends BaseFragment{
     FrameLayout frameLayout_page_11;
     private PageInterface pageInterface;
     private View page_11_1;
@@ -43,12 +43,26 @@ public class Page_11 extends BaseFragment {
         page_11_3 = page_11.findViewById(R.id.page_11_3);
 
 
-
+        setOnClickListener();
         setOnLongClickListener();
 
 
         return page_11;}
 
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (v.getId() == R.id.page_11_1) {
+                pageInterface.OnLongClickListeners("page_11_1");
+            }
+            else if (v.getId() == R.id.page_11_2) {
+                pageInterface.OnLongClickListeners("page_11_2");
+            }
+            else if (v.getId() == R.id.page_11_3) {
+                pageInterface.OnLongClickListeners("page_11_3");}
+        }
+
+        };
 
     View.OnLongClickListener listener = new View.OnLongClickListener() {
         public boolean onLongClick(View v) {
@@ -70,7 +84,12 @@ public class Page_11 extends BaseFragment {
         page_11_2.setOnLongClickListener(listener);
         page_11_3.setOnLongClickListener(listener);
 
+    }
 
+    private void setOnClickListener(){
+        page_11_1.setOnClickListener(onClickListener);
+        page_11_2.setOnClickListener(onClickListener);
+        page_11_3.setOnClickListener(onClickListener);
 
     }
 

@@ -52,6 +52,10 @@ public class pagesFragment extends BaseFragment {
     private boolean stateIsCounter = false;
     private ImageView background_page_page;
     private ImageView img_high_margin;
+    private TextView btn_read_all_page;
+    private FrameLayout main_nav;
+    private TextView btn_repet;
+    private TextView txt_enter_the_word;
 
 
     public pagesFragment() {
@@ -95,6 +99,10 @@ public class pagesFragment extends BaseFragment {
         txt_page_num = view_2.findViewById(R.id.txt_page_num);
         background_page_page = view_2.findViewById(R.id.background_page_page);
         img_high_margin = view_2.findViewById(R.id.img_high_margin);
+        btn_read_all_page = view_2.findViewById(R.id.btn_read_all_page);
+        main_nav = view_2.findViewById(R.id.main_nav);
+        btn_repet = view_2.findViewById(R.id.btn_repet);
+        txt_enter_the_word = view_2.findViewById(R.id.txt_enter_the_word);
 
 
 
@@ -168,7 +176,7 @@ public class pagesFragment extends BaseFragment {
         mediaPlayer=Tool.getAudioPage(getContext(),position);
         seekBar.setMax(mediaPlayer.getDuration());
         txtTitlePage.setText(Tool.getPageTitle(position));
-        if (position>26){txt_page_num.setText((position+13)+"");}else {txt_page_num.setText((position+11)+"");}
+        txt_page_num.setText((position+11)+"");
 
         ViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
@@ -242,6 +250,24 @@ public class pagesFragment extends BaseFragment {
                 }
             }
         });
+
+       btn_read_all_page.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               main_nav.setVisibility(View.GONE);
+               run_player_icon.performClick();
+           }
+       });
+
+       btn_repet.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               btn_read_all_page.setVisibility(View.GONE);
+               btn_repet.setVisibility(View.GONE);
+               txt_enter_the_word.setVisibility(View.VISIBLE);
+               pageInterface.isPlayer(true,false);
+           }
+       });
 
 
 
@@ -338,6 +364,7 @@ public class pagesFragment extends BaseFragment {
 
     private void stopAudio(){
         mediaPlayer.stop();
+        main_nav.setVisibility(View.VISIBLE);
         seekbarHint.setVisibility(View.GONE);
         seekBar.setVisibility(View.GONE);
         stop_player_icon.setVisibility(View.GONE);

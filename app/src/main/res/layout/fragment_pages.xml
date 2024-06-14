@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     android:background="@color/backgroundNav"
 
     >
@@ -13,6 +14,7 @@
         android:id="@+id/background_page_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:src="@drawable/background_page"
         android:scaleType="fitXY" />
 
 
@@ -169,7 +171,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/seekbarHint"
                 android:layout_gravity="center_vertical"
                 android:textAlignment="viewEnd"
-
                 />
         </LinearLayout>
         </LinearLayout>
@@ -276,31 +277,74 @@
 
     </FrameLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="0.2"
-        android:background="@drawable/background_num"
+    <FrameLayout
+        android:id="@+id/main_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="3dp"
-        android:elevation="5dp"
-        android:visibility="gone">
-
-
-        <TextView
+        android:background="@drawable/background_nav"
+        >
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="12"
-            android:textColor="@color/red"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:layout_height="@dimen/_45sdp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/spacing_large">
+
+            <TextView
+                android:id="@+id/txt_enter_the_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_word"
+                android:layout_marginEnd="@dimen/spacing_middle"
+                android:layout_gravity="center_vertical"
+                style="@style/style_text_Define_him"
+                android:textColor="@color/primary_color"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/btn_repet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repet"
+                android:background="@drawable/background_rounded"
+                android:backgroundTint="@color/primary_color"
+                android:layout_marginEnd="@dimen/spacing_middle"
+                android:layout_gravity="center_vertical"
+                style="@style/style_text_Define_him"
+                android:textColor="@color/backgroundColor"
+                android:padding="@dimen/_5sdp"
+                />
+
+
+            <TextView
+                android:id="@+id/btn_read_all_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reading_page"
+                android:background="@drawable/background_rounded"
+                android:backgroundTint="@color/primary_color"
+                android:layout_gravity="center_vertical"
+                style="@style/style_text_Define_him"
+                android:textColor="@color/backgroundColor"
+                android:padding="@dimen/_5sdp"
+                />
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

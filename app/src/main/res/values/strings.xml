@@ -3,8 +3,13 @@
     <string name="Contents">فهرس العناوين الرئيسية</string>
     <string name="this_book">هذا الكتاب</string>
     <string name="Authors">المؤلفون</string>
-    Committee members
-    <string name="users_Guide">دليل المستخدم</string>
+    <string name="enter_number_page">اذهبْ إلى الصفحة رقم : </string>
+    <string name="page">االصفحة: </string>
+    <string name="reading_page">قراءة الصفحة كاملة</string>
+    <string name="repet">تكرار</string>
+    <string name="enter_word">اختر الكلمة المراد تكرارها</string>
+    <string name="from">من</string>
+    <string name="about_group">حول السلسلة</string>
     <string name="Our_services">خدماتنا</string>
     <string name="For_your_comments">لملاحظاتكم</string>
 

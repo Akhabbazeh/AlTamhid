@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.beetronix.al_tamhid.R;
+import com.beetronix.al_tamhid.features.AboutGroupFragment.AboutGroupFragment;
 import com.beetronix.al_tamhid.features.ContentsFragment.ContentsFragment;
 import com.beetronix.al_tamhid.features.thisBook.ThisBookFragment;
 import com.bumptech.glide.Glide;
@@ -50,7 +51,6 @@ public class StartFragment extends BaseFragment {
         img_home_shape_top = view.findViewById(R.id.img_home_shape_top);
         title_group_book = view.findViewById(R.id.title_group_book);
         logo_app = view.findViewById(R.id.logo_app);
-        background_page_start = view.findViewById(R.id.background_page_start);
         background_buttons_start_fragment_1 = view.findViewById(R.id.background_buttons_start_fragment_1);
         background_buttons_start_fragment_2 = view.findViewById(R.id.background_buttons_start_fragment_2);
         background_buttons_start_fragment_3 = view.findViewById(R.id.background_buttons_start_fragment_3);
@@ -102,8 +102,8 @@ public class StartFragment extends BaseFragment {
 
             getActivity().getSupportFragmentManager().beginTransaction()
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .replace(R.id.FrameLayout_main_activity, new UsersGuideFragment(),"UsersGuideFragment")
-                    .addToBackStack("UsersGuideFragment")
+                    .replace(R.id.FrameLayout_main_activity, new AboutGroupFragment(),"AboutGroupFragment")
+                    .addToBackStack("AboutGroupFragment")
                     .commit();
         });
 

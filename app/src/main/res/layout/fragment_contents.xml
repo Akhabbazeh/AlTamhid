@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:layoutDirection="rtl"
     tools:context=".features.OurServicesFragment">
 
     <ImageView
@@ -22,6 +23,7 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_xxx_large"
+        android:layoutDirection="ltr"
         android:background="@color/primary_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,15 +67,117 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"/>
 
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_list_container_title"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/space_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/space_1"
         />
+
+    <FrameLayout
+        android:id="@+id/space_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_medium"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/primary_color"
+        app:layout_constraintBottom_toBottomOf="@+id/img_background_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Go_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_x_large"
+            android:layout_gravity="center_vertical"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_num"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/titleContain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/spacing_medium"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:fontFamily="@font/yakout_linotype_light_bold_1"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_medium"
+                    android:text="@string/enter_number_page"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <EditText
+                    android:id="@+id/edite_number_page_content"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/background_num"
+
+                    android:gravity="center"
+                    android:hint="0"
+                    android:imeOptions="actionGo"
+                    android:inputType="number"
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/yakout_linotype_light_bold_1"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_medium"
+                    android:text="@string/from"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/yakout_linotype_light_bold_1"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_medium"
+                    android:text="53"
+                    android:textSize="@dimen/_15ssp"
+                    style="style_text_Define_him"
+                    android:layout_marginEnd="@dimen/spacing_x_medium"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

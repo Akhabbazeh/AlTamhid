@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".features.UsersGuideFragment">
+    tools:context=".features.AboutGroupFragment.AboutGroupFragment">
 
     <ImageView
         android:id="@+id/background_page_user_guide"
@@ -15,6 +15,7 @@
         android:scaleType="fitXY"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/spacing_xxx_large"
         android:background="@color/primary_color"
@@ -38,7 +39,7 @@
             style="@style/Title_text_ToolBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/users_Guide"
+            android:text="@string/about_group"
             app:layout_constraintBottom_toBottomOf="@+id/ButtonBack"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +49,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView_About_Group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layoutDirection="rtl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

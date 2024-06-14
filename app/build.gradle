@@ -42,4 +42,6 @@ dependencies {
     implementation libs.sdp.android
     implementation libs.ssp.android
     implementation libs.material.v180
+    implementation 'com.thoughtbot:expandablerecyclerview:1.4'
+
 }
