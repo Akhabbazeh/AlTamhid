@@ -47,6 +47,7 @@ public class AdapterGridView extends BaseAdapter {
 
             ImageView imageView = view.findViewById(R.id.img_item_grid_view);
             displayImageDrawable(context,imageView,images[position]);
+
             return view;
         }
     public static void displayImageDrawable(Context context, ImageView img, @DrawableRes int drawable) {

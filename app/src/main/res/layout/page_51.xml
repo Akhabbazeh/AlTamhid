@@ -7,7 +7,7 @@
     android:id="@+id/frameLayout_page_51"
     android:layoutDirection="ltr"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".features.ui.MainActivity"
+          tools:context=".features.ui.MainActivity"
     >
 
 
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layoutDirection="ltr"
-        tools:context=".features.ui.MainActivity">
+              tools:context=".features.ui.MainActivity">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,9 +37,9 @@
 
             <ImageView
                 android:id="@+id/page_51"
+                android:src="@drawable/page_51"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/page_51"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -195,14 +195,14 @@
 
             <View
                 android:id="@+id/page_51_9"
-                android:tag="page_51_9"
-                android:onClick="click"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="@+id/Guideline_horizontal_07"
+                android:onClick="click"
+                android:tag="page_51_9"
                 app:layout_constraintBottom_toTopOf="@+id/Guideline_horizontal_08"
-                app:layout_constraintEnd_toStartOf="@+id/Guideline_vertical_017"
-                app:layout_constraintStart_toStartOf="@id/Guideline_vertical_018"/>
+                app:layout_constraintEnd_toStartOf="@+id/Guideline_vertical_041"
+                app:layout_constraintStart_toStartOf="@id/Guideline_vertical_018"
+                app:layout_constraintTop_toTopOf="@+id/Guideline_horizontal_07" />
 
             <View
                 android:id="@+id/page_51_10"
@@ -221,16 +221,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.94" />
+
             <View
                 android:id="@+id/page_51_11"
-                android:tag="page_51_11"
-                android:onClick="click"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="@+id/Guideline_horizontal_09"
+                android:onClick="click"
+                android:tag="page_51_11"
                 app:layout_constraintBottom_toTopOf="@+id/Guideline_horizontal_010"
                 app:layout_constraintEnd_toStartOf="@+id/Guideline_vertical_021"
-                app:layout_constraintStart_toStartOf="@id/Guideline_vertical_022"/>
+                app:layout_constraintStart_toStartOf="@id/Guideline_vertical_022"
+                app:layout_constraintTop_toTopOf="@+id/Guideline_horizontal_09" />
 
             <View
                 android:id="@+id/page_51_12"

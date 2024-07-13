@@ -7,7 +7,7 @@
     android:id="@+id/frameLayout_page_12"
     android:layoutDirection="ltr"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".features.ui.MainActivity"
+       tools:context=".features.ui.MainActivity"
     >
 
 
@@ -102,7 +102,7 @@
                 android:id="@+id/page_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/page_12"
+                android:src="@drawable/page_12"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

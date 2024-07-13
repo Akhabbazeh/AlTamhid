@@ -7,7 +7,7 @@
     android:id="@+id/frameLayout_page_15"
     android:layoutDirection="ltr"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".features.ui.MainActivity"
+       tools:context=".features.ui.MainActivity"
     >
 
     <androidx.core.widget.NestedScrollView
@@ -20,7 +20,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    tools:context=".features.ui.MainActivity">
+       tools:context=".features.ui.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pagesLayout_15"
@@ -38,7 +38,7 @@
         android:id="@+id/page_15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/page_15"
+        android:src="@drawable/page_15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -236,17 +236,18 @@
         app:layout_constraintEnd_toStartOf="@+id/Guideline_16"
         app:layout_constraintStart_toStartOf="@+id/Guideline_18"
         app:layout_constraintTop_toTopOf="@+id/Guideline_8" />
-    <View
-        android:id="@+id/page_15_18"
-        android:tag="page_15_18"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:onClick="click"
-        app:layout_constraintBottom_toTopOf="@+id/Guideline_9"
-        app:layout_constraintEnd_toStartOf="@+id/Guideline_04"
-        app:layout_constraintStart_toStartOf="@+id/Guideline_15"
-        app:layout_constraintTop_toTopOf="@+id/Guideline_8"
-        />
+
+        <View
+            android:id="@+id/page_15_19"
+            android:tag="page_15_19"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="click"
+            app:layout_constraintBottom_toTopOf="@+id/Guideline_14"
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_3"
+            app:layout_constraintStart_toStartOf="@+id/Guideline_3"
+            app:layout_constraintTop_toTopOf="@+id/Guideline_14" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/Guideline"
         android:layout_width="wrap_content"
@@ -317,8 +318,22 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.99" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guideline_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06" />
 
-    <androidx.constraintlayout.widget.Guideline
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guideline_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.01" />
+
+
+        <androidx.constraintlayout.widget.Guideline
         android:id="@+id/Guideline_03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

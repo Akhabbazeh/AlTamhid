@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_color">#006837</color>
+    <color name="primary_color">#223F52</color>
     <color name="colorAccent">#cdab40</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="white">#fff</color>
@@ -16,7 +16,7 @@
     <color name="red">#ed1e24</color>
     <color name="red_200">#FF6868</color>
 
-    <color name="primaryColor">#0f8660</color>
+    <color name="primaryColor">#223F52</color>
     <color name="yallow">#cdab40</color>
 
 

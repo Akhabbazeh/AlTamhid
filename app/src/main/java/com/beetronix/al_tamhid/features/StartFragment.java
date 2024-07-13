@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.beetronix.al_tamhid.R;
 import com.beetronix.al_tamhid.features.AboutGroupFragment.AboutGroupFragment;
 import com.beetronix.al_tamhid.features.ContentsFragment.ContentsFragment;
+import com.beetronix.al_tamhid.features.about_book.aboutBookFragment;
 import com.beetronix.al_tamhid.features.thisBook.ThisBookFragment;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -51,6 +52,7 @@ public class StartFragment extends BaseFragment {
         img_home_shape_top = view.findViewById(R.id.img_home_shape_top);
         title_group_book = view.findViewById(R.id.title_group_book);
         logo_app = view.findViewById(R.id.logo_app);
+        background_page_start = view.findViewById(R.id.background_page_start);
         background_buttons_start_fragment_1 = view.findViewById(R.id.background_buttons_start_fragment_1);
         background_buttons_start_fragment_2 = view.findViewById(R.id.background_buttons_start_fragment_2);
         background_buttons_start_fragment_3 = view.findViewById(R.id.background_buttons_start_fragment_3);
@@ -59,6 +61,7 @@ public class StartFragment extends BaseFragment {
 
 
 
+        displayImageDrawable(getContext(),background_start_fragment,R.drawable.background_page);
         displayImageDrawable(getContext(),title_group_book,R.drawable.title_group_book);
         displayImageDrawable(getContext(),background_start_fragment,R.drawable.background_start_fragment);
         displayImageDrawable(getContext(),background_page_start,R.drawable.background_page);
@@ -82,10 +85,14 @@ public class StartFragment extends BaseFragment {
 
         background_buttons_start_fragment_2.setOnClickListener(v -> {
 
+            aboutBookFragment aboutBookFragment = new aboutBookFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt("Position" , 9);
+            aboutBookFragment.setArguments(bundle);
             getActivity().getSupportFragmentManager().beginTransaction()
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .replace(R.id.FrameLayout_main_activity, new ThisBookFragment(),"ThisBookFragment")
-                    .addToBackStack("ThisBookFragment")
+                    .replace(R.id.FrameLayout_main_activity, aboutBookFragment ,"aboutBookFragment")
+                    .addToBackStack("aboutBookFragment")
                     .commit();
         });
 

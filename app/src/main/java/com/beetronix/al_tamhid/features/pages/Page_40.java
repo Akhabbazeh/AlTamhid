@@ -7,14 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import com.beetronix.al_tamhid.R;
 import com.beetronix.al_tamhid.features.PageInterface;
+import com.beetronix.al_tamhid.util.Tool;
 import com.example.myapplication.features.ui.BaseFragment;
 
 public class Page_40 extends BaseFragment{
     FrameLayout frameLayout_page_40;
     private PageInterface pageInterface;
+    private ImageView img_page_40;
 
     public Page_40() {
 
@@ -34,6 +37,7 @@ public class Page_40 extends BaseFragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View page_40 = LayoutInflater.from(getContext()).inflate(R.layout.page_40, container, false);
         frameLayout_page_40=page_40.findViewById(R.id.frameLayout_page_40);
+        img_page_40 =page_40.findViewById(R.id.page_40);
 
 
         return page_40;}

@@ -14,6 +14,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -70,13 +71,19 @@ public class ContentsFragment extends BaseFragment {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_GO) {
-                 sendPageNumber(Integer.parseInt(v.getText().toString())-11);
+                    if (Integer.parseInt(v.getText().toString())<=54 && !(Integer.parseInt(v.getText().toString())<4)) {
+                        sendPageNumber(Integer.parseInt(v.getText().toString())-4);
+                        Tool.hideSoftKeyboard(getActivity());
+                    }else if (Integer.parseInt(v.getText().toString())<4 || Integer.parseInt(v.getText().toString())>54){
+                        Toast.makeText(getContext(),
+                                "أدخل عددًا من 4 إلى 54", Toast.LENGTH_LONG).show();
+                    }
                     return true;
                 }
                 return false;
             }
         });
-        Tool.displayImageDrawable(getContext(),img_background_content,R.drawable.background_page);
+    //    Tool.displayImageDrawable(getContext(),img_background_content,R.drawable.background_page);
         Tool.displayImageDrawable(getContext(),ButtonBack,R.drawable.ic_arrow_right);
 
          fragmentManager = getActivity().getSupportFragmentManager();
@@ -95,6 +102,15 @@ public class ContentsFragment extends BaseFragment {
     private void initRecyclerContent()
     {
         List<ContentMain> contentMains = new ArrayList<>();
+
+        List<ContentInfo> childList0 = new ArrayList<>();
+        childList0.add(new ContentInfo("مقدمة الشَّيخ محمَّد نادر خيَّاطة",4));
+        childList0.add(new ContentInfo("مقدمة الشَّيخ الدكتور محمود زعتري",5));
+        childList0.add(new ContentInfo("مقدمة الشيخ عمَّار مصطفى بازرباشي",6));
+        childList0.add(new ContentInfo("مقدمة تعريفية بالكتاب",7));
+        contentMains.add(new ContentMain("مقدمات الكتاب ", childList0));
+
+
         List<ContentInfo> childList1 = new ArrayList<>();
         childList1.add(new ContentInfo("المخارج الخمسة الرَّئيسة وتمارين حروف الجوف",11));
         childList1.add(new ContentInfo("تمارين حروف الحَلْق",12));
@@ -112,7 +128,7 @@ public class ContentsFragment extends BaseFragment {
         contentMains.add(new ContentMain("الدرس الثالث: الهَمْس ", childList3));
 
         List<ContentInfo> childList4 = new ArrayList<>();
-        childList4.add(new ContentInfo("تمارين المبسوطة والمربوطة",18));
+        childList4.add(new ContentInfo("التَّاءُ المبسوطةُ والتَّاءُ المَربوطة وتمارينهما",18));
         contentMains.add(new ContentMain("الدرس الرابع: التَّاءُ المبسوطةُ والتَّاءُ المَربوطةُ ", childList4));
 
         List<ContentInfo> childList5 = new ArrayList<>();
@@ -145,7 +161,7 @@ public class ContentsFragment extends BaseFragment {
         List<ContentInfo> childList9 = new ArrayList<>();
         childList9.add(new ContentInfo("حروف المد مع أمثلة",35));
         childList9.add(new ContentInfo("تمارين حروف المدّ",36));
-        childList9.add(new ContentInfo("حروف المد الصغيرة في الرسم العثماني",37));
+        childList9.add(new ContentInfo("حروف المد الصغيرة في الرسم القرآني",37));
         childList9.add(new ContentInfo("حالاتُ المدِّ الأصليِّ",38));
         childList9.add(new ContentInfo("المدُّ الفرعيُّ (1)",39));
         childList9.add(new ContentInfo("المدُّ الفرعيُّ (2)",40));
@@ -174,7 +190,7 @@ public class ContentsFragment extends BaseFragment {
         contentMains.add(new ContentMain("الدرس الثالث عشر: أمثلةٌ على الفرقِ بين الرَّسْمَين العُثمانيِّ والإملائيّ ", childList13));
 
         List<ContentInfo> childList14 = new ArrayList<>();
-        childList14.add(new ContentInfo("تمارين عامَّ من جزء عمَّ",51));
+        childList14.add(new ContentInfo("تمارين عامَّة من جزء عمَّ",51));
         contentMains.add(new ContentMain("الدرس الرابع عشر: أمثلةٌ تطبيقيَّةٌ من جزء عمَّ ", childList14));
 
         List<ContentInfo> childList15 = new ArrayList<>();
@@ -186,24 +202,34 @@ public class ContentsFragment extends BaseFragment {
 
 
 
-        adapterContent = new AdapterContent(contentMains,fragmentManager,getContext());
+        adapterContent = new AdapterContent(contentMains,fragmentManager,getContext(),recycle_container);
         recycle_container.setAdapter(adapterContent);
         recycle_container.setLayoutManager(new LinearLayoutManager(getContext()));
         recycle_container.setHasFixedSize(false);
+
+
+        adapterContent.setOnItemClickListener(new AdapterContent.OnItemClickListener() {
+            @Override
+            public void OnItemClickListener(boolean state) {
+                if (state){
+                    recycle_container.smoothScrollToPosition(adapterContent.getItemCount() - 1);
+                }
+            }
+        });
     }
 
     private void sendPageNumber(int position){
-        pagesFragment pagesFragment = new pagesFragment();
 
+        pagesFragment pagesFragment = new pagesFragment();
         Bundle bundle = new Bundle();
         bundle.putInt("Position", position);
-
         pagesFragment.setArguments(bundle);
-
         fragmentManager.beginTransaction()
                 .replace(R.id.FrameLayout_main_activity, pagesFragment, "pagesFragment")
                 .addToBackStack("pagesFragment")
                 .commit();
+        edite_number_page_content.setText("");
+        edite_number_page_content.setHint(4 +"");
 
 
     }

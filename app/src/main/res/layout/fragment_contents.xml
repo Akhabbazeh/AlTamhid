@@ -139,9 +139,10 @@
                     android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/background_num"
-
+                    android:fontFamily="@font/yakout_linotype_light_bold_1"
+                    android:textSize="@dimen/_15ssp"
                     android:gravity="center"
-                    android:hint="0"
+                    android:hint="4"
                     android:imeOptions="actionGo"
                     android:inputType="number"
                     android:textColor="@color/colorAccent" />
@@ -164,7 +165,7 @@
                     android:fontFamily="@font/yakout_linotype_light_bold_1"
                     android:gravity="center"
                     android:padding="@dimen/spacing_medium"
-                    android:text="53"
+                    android:text="54"
                     android:textSize="@dimen/_15ssp"
                     style="style_text_Define_him"
                     android:layout_marginEnd="@dimen/spacing_x_medium"

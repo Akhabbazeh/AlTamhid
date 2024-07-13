@@ -1,8 +1,10 @@
 package com.beetronix.al_tamhid.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -13,6 +15,18 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 public class Tool {
+
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager =
+                (InputMethodManager) activity.getSystemService(
+                        Activity.INPUT_METHOD_SERVICE);
+        if (inputMethodManager.isActive()) {
+            if (activity.getCurrentFocus() != null) {
+                inputMethodManager.hideSoftInputFromWindow(
+                        activity.getCurrentFocus().getWindowToken(), 0);
+            }
+        }
+    }
 
     public static String milliSecondsToTimer(long milliseconds) {
         String finalTimerString = "";
@@ -45,181 +59,232 @@ public class Tool {
     public static MediaPlayer getAudioPage(Context context,int position){
 
         if (position==0){
-            return MediaPlayer.create(context,R.raw.page_11);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==1){
-            return MediaPlayer.create(context,R.raw.page_12);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==2){
-            return MediaPlayer.create(context,R.raw.page_13);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==3){
-            return MediaPlayer.create(context,R.raw.page_14);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==4){
-            return MediaPlayer.create(context,R.raw.page_15);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==5){
-            return MediaPlayer.create(context,R.raw.page_16);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==6){
-            return MediaPlayer.create(context,R.raw.page_17);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==7){
-            return MediaPlayer.create(context,R.raw.page_18);
+            return MediaPlayer.create(context,R.raw.page_11);
         }else if (position==8){
-            return MediaPlayer.create(context,R.raw.page_19);
+            return MediaPlayer.create(context,R.raw.page_12);
         }else if (position==9){
-            return MediaPlayer.create(context,R.raw.page_20);
+            return MediaPlayer.create(context,R.raw.page_13);
         }else if (position==10){
-            return MediaPlayer.create(context,R.raw.page_21);
+            return MediaPlayer.create(context,R.raw.page_14);
         }else if (position==11){
-            return MediaPlayer.create(context,R.raw.page_22);
+            return MediaPlayer.create(context,R.raw.page_15);
         }else if (position==12){
-            return MediaPlayer.create(context,R.raw.page_23);
+            return MediaPlayer.create(context,R.raw.page_16);
         }else if (position==13){
-            return MediaPlayer.create(context,R.raw.page_24);
+            return MediaPlayer.create(context,R.raw.page_17);
         }else if (position==14){
-            return MediaPlayer.create(context,R.raw.page_25);
+            return MediaPlayer.create(context,R.raw.page_18);
         }else if (position==15) {
-            return MediaPlayer.create(context, R.raw.page_26);
+            return MediaPlayer.create(context, R.raw.page_19);
         }else if (position==16){
-            return MediaPlayer.create(context,R.raw.page_28);
+            return MediaPlayer.create(context,R.raw.page_20);
         }else if (position==17){
-            return MediaPlayer.create(context,R.raw.page_29);
+            return MediaPlayer.create(context,R.raw.page_21);
         }else if (position==18){
-            return MediaPlayer.create(context,R.raw.page_30);
+            return MediaPlayer.create(context,R.raw.page_22);
         }else if (position==19){
-            return MediaPlayer.create(context,R.raw.page_31);
+            return MediaPlayer.create(context,R.raw.page_23);
         }else if (position==20){
-            return MediaPlayer.create(context,R.raw.page_32);
+            return MediaPlayer.create(context,R.raw.page_24);
         }else if (position==21){
-            return MediaPlayer.create(context,R.raw.page_33);
+            return MediaPlayer.create(context,R.raw.page_25);
         }else if (position==22){
-            return MediaPlayer.create(context,R.raw.page_34);
+            return MediaPlayer.create(context,R.raw.page_26);
         }else if (position==23){
-            return MediaPlayer.create(context,R.raw.page_35);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==24){
-            return MediaPlayer.create(context,R.raw.page_36);
+            return MediaPlayer.create(context,R.raw.page_00);
         }else if (position==25){
-            return MediaPlayer.create(context,R.raw.page_37);
+            return MediaPlayer.create(context,R.raw.page_29);
         }else if (position==26){
-            return MediaPlayer.create(context,R.raw.page_38);
+            return MediaPlayer.create(context,R.raw.page_30);
         }else if (position==27){
-            return MediaPlayer.create(context,R.raw.page_40);
+            return MediaPlayer.create(context,R.raw.page_31);
+        }else if (position==28){
+            return MediaPlayer.create(context,R.raw.page_32);
         }else if (position==29){
-            return MediaPlayer.create(context,R.raw.page_41);
+            return MediaPlayer.create(context,R.raw.page_33);
         }else if (position==30){
-            return MediaPlayer.create(context,R.raw.page_42);
+            return MediaPlayer.create(context,R.raw.page_34);
         }else if (position==31){
-            return MediaPlayer.create(context,R.raw.page_43);
+            return MediaPlayer.create(context,R.raw.page_35);
         }else if (position==32){
-            return MediaPlayer.create(context,R.raw.page_44);
+            return MediaPlayer.create(context,R.raw.page_36);
         }else if (position==33){
-            return MediaPlayer.create(context,R.raw.page_45);
-        }else if (position==36){
-            return MediaPlayer.create(context,R.raw.page_46);
+            return MediaPlayer.create(context,R.raw.page_37);
+        }else if (position==34){
+            return MediaPlayer.create(context,R.raw.page_38);
+        }else if (position==35){
+            return MediaPlayer.create(context,R.raw.page_39);
+        } else if (position==36){
+            return MediaPlayer.create(context,R.raw.page_40);
         }else if (position==37){
-            return MediaPlayer.create(context,R.raw.page_47);
+            return MediaPlayer.create(context,R.raw.page_41);
         }else if (position==38){
-            return MediaPlayer.create(context,R.raw.page_48);
+            return MediaPlayer.create(context,R.raw.page_42);
         }else if (position==39){
-            return MediaPlayer.create(context,R.raw.page_49);
+            return MediaPlayer.create(context,R.raw.page_43);
         }else if (position==40){
-            return MediaPlayer.create(context,R.raw.page_50);
+            return MediaPlayer.create(context,R.raw.page_44);
         }else if (position==41){
-            return MediaPlayer.create(context,R.raw.page_51);
+            return MediaPlayer.create(context,R.raw.page_45);
         }else if (position==42){
-            return MediaPlayer.create(context,R.raw.page_52);
+            return MediaPlayer.create(context,R.raw.page_46);
         }else if (position==43){
+            return MediaPlayer.create(context,R.raw.page_47);
+        }else if (position==44){
+            return MediaPlayer.create(context,R.raw.page_48);
+        }else if (position==45){
+            return MediaPlayer.create(context,R.raw.page_49);
+        }else if (position==46){
+            return MediaPlayer.create(context,R.raw.page_50);
+        }else if (position==47){
+            return MediaPlayer.create(context,R.raw.page_51);
+        }else if (position==48){
+            return MediaPlayer.create(context,R.raw.page_52);
+        }else if (position==49){
             return MediaPlayer.create(context,R.raw.page_53);
-        }else {
+        }else if (position==50){
+            return MediaPlayer.create(context,R.raw.page_00);
+        }else if (position==51){
+            return MediaPlayer.create(context,R.raw.page_00);
+        }else if (position==52){
+            return MediaPlayer.create(context,R.raw.page_00);
+        }else if (position==53){
+            return MediaPlayer.create(context,R.raw.page_00);
+        }else if (position==54){
+            return MediaPlayer.create(context,R.raw.page_00);
+        }  {
             return MediaPlayer.create(context, R.raw.page_00);
         }
     }
 
     public static String getPageTitle(int pageNum){
         switch (pageNum){
-        case 0:
-            return "الحروف حسب ترتيب مخارجها";
-        case 1:
-            return "الحروف حسب ترتيب مخارجها(2)";
-        case 2:
-            return "الحروف حسب ترتيب مخارجها(3)";
-         case 3:
-            return "الحروف حسب ترتيب مخارجها(4)";
-        case 4:
-            return "الحروفٌ اللَّثويَّة";
-        case 5:
-            return "الهمس";
+            case 0:
+                return "مقدمة الشيخ محمد نادر خياطة";
+            case 1:
+                return "مقدمة الشيخ د.محمود زعتري";
+            case 2:
+                return "مقدمة الشيخ عمار مصطفى بازرباشي";
+            case 3:
+                return "مقدِّمةٌ تعريفيَّةٌ بالكتاب";
+            case 4:
+                return "مقدِّمةٌ تعريفيَّةٌ بالكتاب";
+            case 5:
+                return "مقدِّمةٌ تعريفيَّةٌ بالكتاب";
             case 6:
-                return "الهمس(2)";
+                return "دروس المرحلة الأولى";
             case 7:
-                return "التاء المربوطة والتاء المبسوطة";
+                return "المخارج الخمسة الرَّئيسة وتمارين حروف الجوف";
             case 8:
-                return "القلقلة";
+                return "تمارين حروف الحَلْق";
             case 9:
-                return "القلقلة(2)";
+                return "تمارين حروف اللِّسان";
             case 10:
-                return "التفخيم والترقيق";
+                return "تمارين حروف الشَّفتَين والخَيْشوم";
             case 11:
-                return "التفخيم والترقيق(2)";
+                return "تمارين الحروف اللِّثَوِيَّة";
             case 12:
-                return "التفخيم والترقيق(3)";
+                return "تمارين حروف الهمس (1)";
             case 13:
-                return "التفخيم والترقيق(4)";
+                return "تمارين حروف الهمس (2)";
             case 14:
-                return "التفخيم والترقيق(5)";
+                return "التَّاءُ المبسوطةُ والتَّاءُ المَربوطة وتمارينهما";
             case 15:
-                return "اختبار المرحلة الأولى";
+                return "تمارين القلقلة (1)";
             case 16:
-                return "همزة الوصل";
+                return "تمارين القلقلة (2)";
             case 17:
-                return "همزة الوصل(2)";
+                return "تمارين التفخيم (1)";
             case 18:
-                return "لام(ال) التعريف";
+                return "تمارين التفخيم (2)";
             case 19:
-                return "لام(ال) التعريف(2)";
+                return "الحروف التي تَقبلُ التَّفخيمَ أو التَّرقيقَ";
             case 20:
-                return "لام(ال) التعريف(3)";
+                return "أحكام وتمارين لام اسم الجلالة (الله)";
             case 21:
-                return "لام(ال) التعريف(4)";
+                return "أحكام وتمارين الراء";
             case 22:
-                return "المدود";
+                return "اختبار المرحلة الأولى";
             case 23:
-                return "المدود(2)";
+                return "شهادة نجاح باختبار المرحلة الأولى";
             case 24:
-                return "المدود(3)";
+                return "دروس المرحلة الثانية";
             case 25:
-                return "المدود(4)";
+                return "همزةُ الوصلِ في الأسماء";
             case 26:
-                return "المدود(5)";
+                return "همزةُ الوصلِ في الأفعال";
             case 27:
-                return "المدود(6)";
+                return "اللام القمرية وتمارينها (1)";
             case 28:
-                return "الغنة";
+                return "اللام القمرية وتمارينها (2)";
             case 29:
-                return "الغنة(2)";
+                return "اللام الشَّمسية وتمارينها (1)";
             case 30:
-                return "الغنة(3)";
+                return "اللام الشَّمسية وتمارينها (2)";
             case 31:
-                return "التنوين";
+                return "حروف المد مع أمثلة";
             case 32:
-                return "التنوين(2)";
+                return "تمارين حروف المدّ";
             case 33:
-                return "التنوين(3)";
+                return "حروف المد الصغيرة في الرسم القرآني";
             case 34:
-                return "علامات ضبط المصحف";
+                return "حالاتُ المدِّ الأصليِّ";
             case 35:
-                return "علامات ضبط المصحف(2)";
+                return "المدُّ الفرعيُّ (1)";
             case 36:
-                return "علامات ضبط المصحف(3)";
+                return "المدُّ الفرعيُّ (2)";
             case 37:
-                return "أمثلة عن الفرق بين الرسم العثماني والإملائي";
+                return "الغُنَّةُ وتمارينُها";
             case 38:
-                return "أمثلة تطبيقية عن جزء عمّ";
+                return "تمارين الغُنَّة (1)";
             case 39:
-                return "اختبار كامل الكتاب";
+                return "تمارين الغُنَّة (2)";
             case 40:
-                return "اختبار كامل الكتاب(2)";
+                return "التَّنوينُ وتمارينُه";
+            case 41:
+                return "تمارين التَّنوين (1)";
+            case 42:
+                return "تمارين التَّنوين (2)";
+            case 43:
+                return "علاماتُ الوَقْف";
+            case 44:
+                return "علاماتُ الوَقفِ وعلامةُ السَّجدة";
+            case 45:
+                return "علاماتٌ متفرِّقةٌ";
+            case 46:
+                return "أمثلةٌ توضِّح الفروقات بين الرَّسْم العثماني والرَّسْم الإملائي";
+            case 47:
+                return "تمارين عامَّة من جزء عمَّ";
+            case 48:
+                return "اختبار (1)";
+            case 49:
+                return "اختبار (2)";
+            case 50:
+                return "شهادة نجاح باختبار كامل الكتاب";
+
             default: return null;
 
 
         }
     }
+
+
     public static void displayImageDrawable(Context context, ImageView img, @DrawableRes int drawable) {
         try {
             Glide.with(context).load(drawable)
@@ -1503,8 +1568,8 @@ public class Tool {
                 return R.raw.page_49_18;
             case "page_49_19":
                 return R.raw.page_49_19;
-//            case "page_49_20":
-//                return R.raw.page_49_20;
+            case "page_49_20":
+                return R.raw.page_49_20;
             case "page_50_1":
                 return R.raw.page_50_1;
             case "page_50_2":

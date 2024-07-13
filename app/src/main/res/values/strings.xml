@@ -1,35 +1,36 @@
 <resources>
-    <string name="app_name">التمهيد لتلاوة الكتاب المجيد</string>
-    <string name="Contents">فهرس العناوين الرئيسية</string>
+    <string name="app_name">التمهيد لتلاوة القرآن المجيد</string>
+    <string name="Contents">فهرس العناوين</string>
     <string name="this_book">هذا الكتاب</string>
     <string name="Authors">المؤلفون</string>
     <string name="enter_number_page">اذهبْ إلى الصفحة رقم : </string>
     <string name="page">االصفحة: </string>
-    <string name="reading_page">قراءة الصفحة كاملة</string>
-    <string name="repet">تكرار</string>
+    <string name="reading_page">قراءة الصفحة</string>
+    <string name="repet">تكرارات الكلمة</string>
     <string name="enter_word">اختر الكلمة المراد تكرارها</string>
     <string name="from">من</string>
     <string name="about_group">حول السلسلة</string>
+    <string name="book_details">تفاصيل الكتاب</string>
     <string name="Our_services">خدماتنا</string>
     <string name="For_your_comments">لملاحظاتكم</string>
 
 
-    <string name="Committee_members">أعضاء لجنة التأليف:</string>
-    <string name="Author_Name_1">د.عبد الله بوشي (مشرفاً)</string>
+    <string name="Committee_members">أعضاء لجنة التَّأليف:</string>
+    <string name="Author_Name_1">د.عبد الله بوشي (مُشرفًا)</string>
     <string name="Author_Name_2">أ.أحمد فارس</string>
     <string name="Author_Name_3">أ.عبد القادر بادنجكي</string>
     <string name="Author_Name_4">أ.محمد عبد المنعم بادنجكي</string>
-    <string name="Author_Name_5">أ.محمد كحاط</string>
+    <string name="Author_Name_5">أ.محمد كحَّاط</string>
     <string name="Author_Name_6">أ.يحيى دبلوني</string>
     <string name="Author_Name_7">أ.يوسف سويد</string>
 
     <string name="Define_him">قدّم له:</string>
-    <string name="Define_him_name_1">الشّيخ محمّد نادر خيّاطة</string>
-    <string name="Description_of_Define_him_1">مجاز في القراءات العشر.</string>
-    <string name="Define_him_name_2">الشّيخ د. محمود زعتري</string>
-    <string name="Description_of_Define_him_2">دكتوراه في القراءات ومجاز في القراءات العشر.</string>
-    <string name="Define_him_name_3">الشّيخ عمّار مصطفى بازرباشي</string>
-    <string name="Description_of_Define_him_3">ماجستير في الشريعة الإسلامية ومجاز في القراءات العشر.</string>
+    <string name="Define_him_name_1">الشَّيخ محمَّد نادر خيَّاطة</string>
+    <string name="Description_of_Define_him_1">مجازٌ في القراءات العشر</string>
+    <string name="Define_him_name_2">الشَّيخ د. محمود زعتري</string>
+    <string name="Description_of_Define_him_2">دكتوراه في القراءات ومجازٌ في القراءات العشر</string>
+    <string name="Define_him_name_3">الشَّيخ عمَّار مصطفى بازرباشي</string>
+    <string name="Description_of_Define_him_3">ماجستير في الشَّريعة الإسلاميَّة ومجازٌ في القراءات العشر</string>
 
     <string name="this_book_1">
 بابٌ يدخل منه فِلذةُ أكبادِنا إلى عالم القرآن الكريم، ليتفيّؤُوا ظِلالَهُ الوافِرَةَ ويُرتّلوا آياته العظيمة، ويتلونه حقّ تلاوته.
@@ -40,4 +41,20 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about_group_discrebtion">
+         الحمدُ لله ربِّ العالمين، وأفضلُ الصَّلاة وأتمُّ التَّسليمِ على سيِّدِنا محمَّدٍ حبيبِ ربِّ العالمين وبعد:\n\n
+
+- فهذه السِّلسلةُ التي هي بعنوان:
+        \n
+(سلسلة زِدني علمًا وخُلُقًا)
+        \n
+تتخصَّصُ بالمستويات الأولى
+من كلِّ علمٍ من العلوم الشرعيَّةِ والعربيَّة، تهدفُ لبناء شخصيَّةِ الطَّالبِ بأسلوبٍ سهلٍ مبسَّطٍ وعلميٍّ متكامِلٍ، تعتمدُ على توضيح الفكرةِ بالألوانِ المناسبةِ والعباراتِ الهادفة والصُّورِ المعبِّرة.\n\n
+
+- وقد قامَتْ لجنةٌ متخصِّصةٌ من أهل الخِبرةِ بصياغةِ وتأليف كلِّ كتابٍ من كُتُبِ السِّلسلة بدقَّةٍ وإتقانٍ.\n\n
+
+- سائلين المولى سُبحانه الإخلاصَ والقَبولَ، وأن يجزيَ خيرًا كلَّ من ساهم في تأليف كُتُب السِّلسلة ونشرِها.\n\n
+
+- وهذه لمحةٌ عن إصدارات السِّلسلة حتى الآن:\n</string>
 </resources>

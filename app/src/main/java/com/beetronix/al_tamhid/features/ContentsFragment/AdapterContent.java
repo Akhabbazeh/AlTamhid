@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.beetronix.al_tamhid.R;
 import com.beetronix.al_tamhid.features.pages.pagesFragment;
@@ -28,11 +29,25 @@ public class AdapterContent extends ExpandableRecyclerViewAdapter<AdapterContent
 
     private Context context;
     private FragmentManager fragmentManager;
-    public AdapterContent(List<? extends ExpandableGroup> groups,FragmentManager fragmentManager,Context context)
+    private OnItemClickListener onItemClickListener;
+    private RecyclerView recycle_container;
+    public AdapterContent(List<? extends ExpandableGroup> groups,FragmentManager fragmentManager,Context context,RecyclerView recycle_container)
     {
         super(groups);
         this.context = context;
         this.fragmentManager = fragmentManager;
+        this.recycle_container = recycle_container;
+    }
+
+    public interface OnItemClickListener
+    {
+        void OnItemClickListener(boolean state);
+
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener)
+    {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @Override
@@ -60,8 +75,7 @@ public class AdapterContent extends ExpandableRecyclerViewAdapter<AdapterContent
         holder.content_child_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendPageNumber(artist.getPage_number()-11);
-
+                sendPageNumber(artist.getPage_number() - 4);
             }
         });
 
@@ -74,6 +88,7 @@ public class AdapterContent extends ExpandableRecyclerViewAdapter<AdapterContent
         {
             holder.txtRecyclerNameParent.setText(group.getTitle());
             holder.txt_page_num_content_parent.setText(group.getItemCount()+"");
+
         }
     }
 
@@ -100,6 +115,7 @@ public class AdapterContent extends ExpandableRecyclerViewAdapter<AdapterContent
         private TextView txtRecyclerNameParent;
         private TextView txt_page_num_content_parent;
         private ImageView imgRecyclerArrow;
+        private CardView card_item_content;
 
         public ViewHolderExamParent(View itemView)
         {
@@ -108,6 +124,7 @@ public class AdapterContent extends ExpandableRecyclerViewAdapter<AdapterContent
             imgRecyclerArrow = itemView.findViewById(R.id.imgRecyclerArrow);
             txtRecyclerNameParent = itemView.findViewById(R.id.txtRecyclerNameParent);
             txt_page_num_content_parent = itemView.findViewById(R.id.txt_page_num_content_parent);
+            card_item_content = itemView.findViewById(R.id.card_item_content);
         }
 
         @Override

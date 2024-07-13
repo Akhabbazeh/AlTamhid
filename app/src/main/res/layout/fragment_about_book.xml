@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundNav"
+    android:layoutDirection="rtl"
+    tools:context=".features.AboutGroupFragment.AboutGroupFragment">
+
+
+    <FrameLayout
+        android:id="@+id/space_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_medium"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"/>
+
+
+
+    <ImageView
+        android:id="@+id/background_page_user_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xxx_large"
+        android:layoutDirection="ltr"
+        android:background="@color/primary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ButtonBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/spacing_m_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorAccent">
+
+        </ImageView>
+
+        <TextView
+            style="@style/Title_text_ToolBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_details"
+            app:layout_constraintBottom_toBottomOf="@+id/ButtonBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ButtonBack">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="@+id/background_page_user_guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space_1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/spacing_large"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAboutSchoolImages"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_325sdp"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_large"
+
+                android:layout_marginEnd="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
+                app:cardCornerRadius="@dimen/spacing_large">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/pagerAboutBookImages"
+                    android:layout_width="match_parent"
+                    android:rotationY="180"
+                    android:layout_height="@dimen/_300sdp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutDotsAboutBookImages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:gravity="center|end"
+                    android:rotationY="180"
+                    android:orientation="horizontal" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginEnd="@dimen/spacing_large"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:id="@+id/txt_book_name"
+                    style="@style/style_text_Define_him"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/_20ssp"
+                    android:textColor="@color/primary_color"
+                    android:visibility="visible"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+                <ImageView
+                    android:id="@+id/btn_go_to_whatsapp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="2dp"
+                    app:tint="#019C11"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/spacing_x_medium"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/txt_book_description"
+                style="@style/style_text_Define_him"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_x_small"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <LinearLayout
+                android:id="@+id/btn_go_to_Telegram_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/spacing_large"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/style_text_Define_him"
+                    android:layout_width="wrap_content"
+                    android:text="للانضمام لقناة التلغرام الخاصة بالكتاب :"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_x_small"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/primary_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_logo_app_about_group_2" />
+
+                <ImageView
+                    android:id="@+id/btn_go_to_Telegram"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    app:tint="#279fda"
+                    android:src="@drawable/telegram_icon"
+                    android:gravity="center_vertical"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_go_to_google_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/spacing_large"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txt_word_go_to_google_play"
+                    style="@style/style_text_Define_him"
+                    android:layout_width="wrap_content"
+                    android:text="لتحميل التطبيق الخاص بالكتاب : "
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_x_small"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/primary_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_logo_app_about_group_2" />
+
+
+                <ImageView
+                    android:id="@+id/img_go_to_google_play"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/spacing_x_medium"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/google_play_icon"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

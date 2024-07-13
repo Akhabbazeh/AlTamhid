@@ -7,7 +7,7 @@
     android:id="@+id/frameLayout_page_24"
     android:layoutDirection="ltr"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".features.ui.MainActivity"
+          tools:context=".features.ui.MainActivity"
     >
 
 
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layoutDirection="ltr"
-        tools:context=".features.ui.MainActivity">
+              tools:context=".features.ui.MainActivity">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,9 +37,9 @@
 
             <ImageView
                 android:id="@+id/page_24"
+                android:src="@drawable/page_24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/page_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

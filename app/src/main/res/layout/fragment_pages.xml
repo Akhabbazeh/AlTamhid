@@ -12,34 +12,39 @@
 
     <ImageView
         android:id="@+id/background_page_page"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/background_page"
-        android:scaleType="fitXY" />
+        android:scaleType="centerCrop" />
 
 
-
-
-    <ImageView
+    <FrameLayout
         android:id="@+id/img_high_margin"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/spacing_m_large"
-        android:scaleType="fitXY"
+        android:layout_height="21dp"
+        android:background="@color/primary_color"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_page_num"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="@+id/txt_page_num" />
 
     <TextView
         android:id="@+id/txt_page_num"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/spacing_m_large"
-        android:text="12"
-        android:background="@color/primary_color"
-        android:textColor="@color/white"
         style="@style/Title_text_Login_Interface"
-        android:layout_marginStart="@dimen/spacing_m_large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/spacing_m_large"
+        android:background="@drawable/background_page_number"
+        android:gravity="center"
+        android:text="12"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
@@ -47,9 +52,9 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/spacing_x_small"
-        android:layout_marginTop="@dimen/spacing_large"
-        app:layout_constraintBottom_toTopOf="@+id/main_nav"
+        android:layout_marginTop="@dimen/spacing_middle"
+       app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="62dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_high_margin">
@@ -91,39 +96,81 @@
                 android:visibility="gone"
                 />
 
-            <View
+            <LinearLayout
+                android:id="@+id/btn_repet_layout"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-
-
-            <TextView
-                android:id="@+id/btn_repet"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="@string/repet"
-                android:background="@drawable/background_rounded"
-                android:backgroundTint="@color/primary_color"
-                android:layout_marginEnd="@dimen/spacing_middle"
                 android:layout_gravity="center_vertical"
-                style="@style/style_text_Define_him"
-                android:textColor="@color/backgroundColor"
-                android:padding="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/rep_word_icon"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/btn_repet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repet"
+                    android:lines="1"
+                    android:background="@drawable/background_rounded"
+                    android:backgroundTint="@color/primary_color"
+                    android:layout_marginEnd="@dimen/spacing_middle"
+                    android:layout_gravity="center_vertical"
+                    style="@style/style_text_Define_him"
+                    android:textColor="@color/backgroundColor"
+                    android:padding="@dimen/_5sdp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="1.5dp"
+                android:background="@color/primary_color"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/spacing_x_medium"
+                android:layout_marginHorizontal="10dp"
                 />
 
-
-            <TextView
-                android:id="@+id/btn_read_all_page"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/btn_read_all_page_layout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="@string/reading_page"
-                android:background="@drawable/background_rounded"
-                android:backgroundTint="@color/primary_color"
-                android:layout_gravity="center_vertical"
-                style="@style/style_text_Define_him"
-                android:textColor="@color/backgroundColor"
-                android:padding="@dimen/_5sdp"
-                />
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/run_all_page_icon"
+                    android:layout_marginEnd="@dimen/spacing_medium"
+                    android:layout_gravity="center_vertical"/>
+
+
+                <TextView
+                    android:id="@+id/btn_read_all_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reading_page"
+                    android:lines="1"
+                    android:background="@drawable/background_rounded"
+                    android:backgroundTint="@color/primary_color"
+                    android:layout_gravity="center_vertical"
+                    style="@style/style_text_Define_him"
+                    android:textColor="@color/backgroundColor"
+                    android:padding="@dimen/_5sdp"
+                    />
+
+            </LinearLayout>
+
 
 
 
