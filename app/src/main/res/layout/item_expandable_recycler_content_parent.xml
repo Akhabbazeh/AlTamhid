@@ -28,7 +28,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="رياضيات"
             style="@style/style_text_Define_him"
             android:layout_marginStart="@dimen/spacing_middle"
             android:layout_gravity="center_vertical"

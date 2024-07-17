@@ -243,10 +243,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="click"
-            app:layout_constraintBottom_toTopOf="@+id/Guideline_14"
-            app:layout_constraintEnd_toStartOf="@+id/Guideline_3"
-            app:layout_constraintStart_toStartOf="@+id/Guideline_3"
-            app:layout_constraintTop_toTopOf="@+id/Guideline_14" />
+            app:layout_constraintBottom_toTopOf="@+id/Guideline_013"
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_04"
+            app:layout_constraintStart_toStartOf="@+id/Guideline_15"
+            app:layout_constraintTop_toTopOf="@+id/Guideline_014" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/Guideline"
@@ -319,18 +319,18 @@
         app:layout_constraintGuide_percent="0.99" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/Guideline_13"
+            android:id="@+id/Guideline_013"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.06" />
+            app:layout_constraintGuide_percent="0.995" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/Guideline_14"
+            android:id="@+id/Guideline_014"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.01" />
+            app:layout_constraintGuide_percent="0.934" />
 
 
         <androidx.constraintlayout.widget.Guideline

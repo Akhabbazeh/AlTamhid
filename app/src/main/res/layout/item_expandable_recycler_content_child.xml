@@ -23,6 +23,7 @@
             android:id="@+id/txtRecyclerNameChild"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:textColor="@color/text_color"
             android:layout_height="wrap_content"
             style="@style/style_text_Define_him"
             android:layout_marginStart="@dimen/spacing_middle"
@@ -39,7 +40,7 @@
             style="@style/style_text_Define_him"
             android:layout_marginEnd="15dp"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/text_color"
             />
 
 

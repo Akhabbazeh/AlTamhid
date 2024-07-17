@@ -123,6 +123,18 @@
                 app:layout_constraintEnd_toStartOf="@+id/Guideline_vertical_01"
                 app:layout_constraintStart_toStartOf="@id/Guideline_vertical_02" />
 
+            <View
+                android:id="@+id/bsm_allah"
+                android:tag="bsm_allah"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="click"
+                app:layout_constraintTop_toTopOf="@+id/Guideline_horizontal_015"
+                app:layout_constraintBottom_toTopOf="@+id/Guideline_horizontal_016"
+                app:layout_constraintEnd_toStartOf="@+id/Guideline_vertical_04"
+                app:layout_constraintStart_toStartOf="@id/Guideline_vertical_03" />
+
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/Guideline_horizontal_01"
                 android:layout_width="wrap_content"
@@ -222,6 +234,20 @@
                 app:layout_constraintGuide_percent="0.999" />
 
             <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/Guideline_horizontal_015"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/Guideline_horizontal_016"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.21" />
+
+            <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/Guideline_vertical_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -234,6 +260,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/Guideline_vertical_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.23" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/Guideline_vertical_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.76" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
